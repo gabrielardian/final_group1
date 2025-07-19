@@ -1,5 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as stc
+import sklearn
 from ml_app import run_ml_app
 from data_app import run_data_app
 

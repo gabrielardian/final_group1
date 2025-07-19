@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-
+import sklearn
 def run_data_app(csv_path):
     try:
         df = pd.read_csv(csv_path)
