@@ -39,5 +39,5 @@ def run_data_app(csv_path):
 
 
 if __name__ == "__main__":
-    csv_path = "data_sensus.csv"  # Ganti dengan path file CSV kamu
+    csv_path = "data_sensus.csv"  
     run_data_app(csv_path)
