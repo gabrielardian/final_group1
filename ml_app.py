@@ -75,10 +75,10 @@ def run_ml_app():
     income_label = label_encoders['Income'].inverse_transform(pred)[0]
     st.write(f"Prediksi Penghasilan: **{income_label}**")
 
-    st.json({
-        label_encoders['Income'].inverse_transform([0])[0]: f"{prob[0][0]:.2f}%",
-        label_encoders['Income'].inverse_transform([1])[0]: f"{prob[0][1]:.2f}%"
-    })
+    if income_label == ">50K":
+        st.success("Pendapatan Anda >50K. Anda Hebat !!!!!")
+    else:
+        st.warning("Pendapatan Anda <=50K. Anda harus lebih kerja keras.")
 
 if __name__ == '__main__':
     run_ml_app()
